@@ -17,11 +17,12 @@ namespace GC_Lab12
             School = school;
         }
 
-        public override void ToString()
+        public override string ToString()
         {
             base.ToString();
-            Console.WriteLine($"Pay: {Pay}");
-            Console.WriteLine($"School: {School}");
+            //Console.WriteLine($"Pay: {Pay}");
+            //Console.WriteLine($"School: {School}");
+            return "STAFF MEMBER ERROR";
         }
 
         

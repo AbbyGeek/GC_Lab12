@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GC_Lab12
 {
-    class Person
+    class Person : IComparable<Person>
     {
         public string Name { get; set; }
         public string Address { get; set; }
@@ -17,10 +17,15 @@ namespace GC_Lab12
             Address = address;
         }
 
-        public virtual void ToString()
+        public override string ToString()
         {
-                Console.WriteLine($"\nName: {Name}");
-                Console.WriteLine($"Address: {Address}");
+                //Console.WriteLine($"\nName: {Name}");
+                //Console.WriteLine($"Address: {Address}");
+            return $"Name: {Name}\nAddress: {Address}\n";
+        }
+        public int CompareTo(Person other)
+        {
+            return this.Name.CompareTo(other.Name);
         }
 
     }
